@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <arg name="namespace" default="robofit" />
+    <arg name="exercise_topic" default="/exercise" />
+
+    <node name="myo_raw" pkg="myo_ros" type="myo_raw.py" ns="$(arg namespace)" output="screen" >
+        <param name="exercise_topic" value="$(arg exercise_topic)" />
+    </node>
+
+
+</launch>
